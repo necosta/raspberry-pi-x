@@ -1,6 +1,6 @@
 # RaspberryPi
 
-**TODO: Add description**
+Playground project built in [Elixir](https://elixir-lang.org/)
 
 ## Installation
 

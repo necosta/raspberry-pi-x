@@ -23,8 +23,16 @@ defmodule RaspberryPi do
     IO.puts("Started app")
     IO.puts("Hello #{hello()}")
 
-    # ToDo: Understand this logic...
-    children = []
+    children = [
+      Plug.Adapters.Cowboy.child_spec(
+        :http,
+        RaspberryPi.Router,
+        [],
+        port: Application.fetch_env!(:raspberry_pi, :port)
+      ),
+      {RaspberryPi.CalcServer, 0}
+    ]
+
     Supervisor.start_link(children, strategy: :one_for_one)
   end
 end

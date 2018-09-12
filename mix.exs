@@ -22,7 +22,8 @@ defmodule RaspberryPi.MixProject do
   defp deps do
     [
       {:cowboy, "~> 1.1"},
-      {:plug, "~> 1.4"}
+      {:plug, "~> 1.4"},
+      {:hlclock, "~> 0.1.5"}
     ]
   end
 end

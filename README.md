@@ -8,7 +8,7 @@ Playground project built in [Elixir](https://elixir-lang.org/)
 * Fetch dependencies: `mix deps.get`
 * Compile: `mix compile`
 * Test: `mix test --no-start`
-* Run: `mix run`
+* Run: `mix run --no-halt`
 
 ## Examples
 `curl -X GET http://localhost:8088/result`

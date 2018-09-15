@@ -5,14 +5,18 @@ Playground project built in [Elixir](https://elixir-lang.org/)
 ## How to
 
 * Format: `mix format`
-* Fetch dependencies: `mix deps.get`
+* Install dependencies: `mix deps.get`
+
 * Compile: `mix compile`
+* Setup database: `mix ecto.setup`
+* Install Node.js libs: `cd assets && npm install`
+
 * Test: `mix test --no-start`
-* Run: `mix run --no-halt`
+* Run: `mix phx.server`
 
-## Examples
-`curl -X GET http://localhost:8088/result`
+Endpoint available at [`localhost:4000`](http://localhost:4000)
 
-`curl -X POST http://localhost:8088/add?number=123`
+**Note:**
 
-`curl -X POST http://localhost:8088/sub?number=12`
+This project requires a Postgresql instance running on the default port
+for `ecto.create` to run correctly. 
